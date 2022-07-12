@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Restaurant {
+  id           String        @id @default(uuid())
+  name         String        @unique
+  menuUrl      String
+  MealPrices   MealPrice[]
+  MealPictures MealPicture[]
+  scrape       Boolean       @default(true)
+}
+
+model MealPicture {
+  id           String     @id @default(uuid())
+  img          String
+  meal         Meal       @relation(fields: [mealId], references: [id])
+  mealId       String
+  restaurant   Restaurant @relation(fields: [restaurantId], references: [id])
+  restaurantId String
+}
+
+model Meal {
+  id             String        @id @default(uuid())
+  name           String        @unique
+  nameNormalized String        @unique
+  category       Category      @relation(fields: [categoryId], references: [id])
+  categoryId     String
+  mealPrices     MealPrice[]
+  MealPictures   MealPicture[]
+}
+
+model Category {
+  id    String @id @default(uuid())
+  name  String @unique
+  meals Meal[]
+}
+
+model MealPrice {
+  id           String     @id @default(uuid())
+  date         DateTime   @db.Date
+  Meal         Meal       @relation(fields: [mealId], references: [id], onDelete: Cascade)
+  mealId       String
+  restaurant   Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  restaurantId String
+  priceStudent Float
+  priceRegular Float
+  portion      String?
+}
