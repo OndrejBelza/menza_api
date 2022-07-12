@@ -14,6 +14,10 @@ class RestaurantService {
     return this.prismaService.restaurant.findFirst({ where: { id } });
   }
 
+  async findRestaurantByName(name: string): Promise<Restaurant | null> {
+    return this.prismaService.restaurant.findFirst({ where: { name } });
+  }
+
   async createRestaurant(name: string, menuUrl: string): Promise<Restaurant> {
     return this.prismaService.restaurant.create({
       data: {

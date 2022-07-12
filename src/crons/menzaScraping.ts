@@ -157,6 +157,7 @@ export class ScrapingService {
     meal: Meal,
     categoryId: string,
     restaurantId: string,
+    restaurantName: string,
     date: Date
   ) {
     let dbMeal: DbMeal | null = await this.mealService.findMealByNormalizedName(
@@ -197,7 +198,7 @@ export class ScrapingService {
         const filename = `${meal.name.replace(
           /\/|\-|\_|\.|\*|\'|\(|\)/gi,
           " "
-        )}-${restaurantId}-${dayjs().format("YYYY-MM-DD")}.${ext}`;
+        )}-${restaurantName}-${dayjs().format("YYYY-MM-DD")}.${ext}`;
         const uploadResult = await this.uploadImage(img, filename, contentType);
 
         console.log(uploadResult);
@@ -246,6 +247,7 @@ export class JobController {
             meal,
             category.id,
             restaurant.id,
+            restaurant.name,
             new Date()
           );
         }
