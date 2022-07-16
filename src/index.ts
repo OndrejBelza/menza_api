@@ -6,10 +6,7 @@ import cors from "cors";
 import { ApolloServer } from "apollo-server-express";
 import { buildSchema } from "type-graphql";
 import { MenuResolver } from "./resolvers/menu/menu.resolver";
-import {
-  ApolloServerPluginLandingPageDisabled,
-  ApolloServerPluginLandingPageGraphQLPlayground,
-} from "apollo-server-core";
+import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import MealResolver from "./resolvers/meal/meal.resolver";
 import CategoryResolver from "./resolvers/category/category.resolver";
 import { MyContext } from "./types/context";
@@ -49,11 +46,7 @@ async function main() {
       validate: false,
     }),
     context: ({ req, res }): MyContext => ({ req, res }),
-    plugins: [
-      process.env.NODE_ENV === "production"
-        ? ApolloServerPluginLandingPageDisabled()
-        : ApolloServerPluginLandingPageGraphQLPlayground(),
-    ],
+    plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
   });
 
   await apolloServer.start();
