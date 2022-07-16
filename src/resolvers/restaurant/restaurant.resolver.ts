@@ -52,8 +52,7 @@ class RestaurantResolver {
   async createRestaurant(
     @Arg("input", () => CreateRestaurantInput) input: CreateRestaurantInput
   ) {
-    const { name, menuUrl } = input;
-    return this.restaurantService.createRestaurant(name, menuUrl);
+    return this.restaurantService.createRestaurant(input);
   }
 
   @Mutation(() => Restaurant)
@@ -69,8 +68,8 @@ class RestaurantResolver {
   async updateRestaurant(
     @Arg("input", () => UpdateRestaurantInput) input: UpdateRestaurantInput
   ): Promise<BaseRestaurant> {
-    const { id, name, menuUrl } = input;
-    return this.restaurantService.updateRestaurant(id, name, menuUrl);
+    const { id } = input;
+    return this.restaurantService.updateRestaurant(id, input);
   }
 }
 

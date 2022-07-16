@@ -26,16 +26,22 @@ export class CreateRestaurantInput {
 
   @Field()
   menuUrl: string;
+
+  @Field()
+  address: string;
+
+  @Field()
+  img: string;
+
+  @Field()
+  openingHours: string;
+
+  @Field(() => Date)
+  scrapingStartedAt: Date;
 }
 
 @InputType()
-export class UpdateRestaurantInput {
+export class UpdateRestaurantInput extends CreateRestaurantInput {
   @Field(() => ID)
   id: string;
-
-  @Field()
-  name: string;
-
-  @Field()
-  menuUrl: string;
 }

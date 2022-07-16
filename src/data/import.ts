@@ -36,18 +36,86 @@ enum Restaurants {
   "vydejnaKarlovoNamesti" = "Výdejna Karlovo náměstí",
 }
 
-const restaurantsUrl: Record<Restaurants, string> = {
-  "Bistro MÚVS": "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=13",
-  ArchiCafé: "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=15",
-  "MEGA BUF FAT": "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=12",
-  "Menza Kladno": "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=9",
-  "Menza Podolí": "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=4",
-  "Menza Strahov": "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=1",
-  "Studentský dům": "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=2",
-  "Technická menza": "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=3",
-  "Výdejna Horská": "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=6",
-  "Výdejna Karlovo náměstí":
-    "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=8",
+const restaurantsDefinition: Record<
+  Restaurants,
+  {
+    menuUrl: string;
+    address: string;
+    openingHours: string;
+    img: string;
+    scrapingStartedAt: Date;
+  }
+> = {
+  "Bistro MÚVS": {
+    menuUrl: "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=13",
+    address: "Kolejní 2637, 160 00 Praha 6",
+    img: "https://www.suz.cvut.cz/sites/default/files/styles/gallery_full/public/img/article/gallery/_k2_2163-2.jpg?itok=uk2XpxVv",
+    openingHours: "Po - Pá 8:30 - 16:00",
+    scrapingStartedAt: dayjs("2022-05-03").toDate(),
+  },
+  ArchiCafé: {
+    menuUrl: "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=15",
+    address: "Thákurova 9, 160 00 Praha 6",
+    img: "https://www.suz.cvut.cz/sites/default/files/imce/20180111_001_cvut-vic-ryszawy_1.jpg",
+    openingHours: "Po - Čt 8:30 - 17:30, Pá 8:30 - 14:00",
+    scrapingStartedAt: dayjs("2022-05-03").toDate(),
+  },
+  "MEGA BUF FAT": {
+    menuUrl: "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=12",
+    address: "Thákurova 2077/7, 160 00 Praha 6",
+    img: "https://www.suz.cvut.cz/sites/default/files/styles/gallery_full/public/img/article/gallery/20180111_004_cvut-vic-ryszawy.jpg?itok=rHwWnHjR",
+    openingHours: "Po - Čt 7:30 - 18:00, Pá 7:30 - 14:30",
+    scrapingStartedAt: dayjs("2022-05-03").toDate(),
+  },
+  "Menza Kladno": {
+    menuUrl: "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=9",
+    address: "nám. Sítná 3105, 272 01 Kladno",
+    img: "http://suz.cvut.cz/sites/default/files/styles/gallery_full/public/img/article/gallery/kladno_02_n.jpg?itok=dg3P09o7",
+    openingHours: "Po - Pá 10:30 - 14:00",
+    scrapingStartedAt: dayjs("2022-05-03").toDate(),
+  },
+  "Menza Podolí": {
+    menuUrl: "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=4",
+    address: "Na Lysině 772/12, 147 00 Praha 4",
+    img: "http://www.suz.cvut.cz/sites/default/files/styles/gallery_full/public/img/article/gallery/podoli-in3.jpg?itok=Br2b45mb",
+    openingHours: "Po - Čt 11:00 - 14:30 17:00 - 20:30, Pá 11:00 - 14:00",
+    scrapingStartedAt: dayjs("2022-05-03").toDate(),
+  },
+  "Menza Strahov": {
+    menuUrl: "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=1",
+    address: "Jezdecká 1920, 160 17 Praha 6-Strahov",
+    img: "https://www.suz.cvut.cz/sites/default/files/imce/menza-strahov-j1.jpg",
+    openingHours: "Po - Pá 11:00 - 15:00",
+    scrapingStartedAt: dayjs("2022-05-03").toDate(),
+  },
+  "Studentský dům": {
+    menuUrl: "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=2",
+    address: "Bílá 6, 160 00 Praha 6",
+    img: "http://www.suz.cvut.cz/sites/default/files/styles/gallery_full/public/img/article/gallery/sd-4.jpg?itok=bLiYLTW_",
+    openingHours: "Po - Pá 10:30 - 14:30",
+    scrapingStartedAt: dayjs("2022-05-03").toDate(),
+  },
+  "Technická menza": {
+    menuUrl: "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=3",
+    address: "Jugoslávských partyzánů 1580, 160 00 Praha 6",
+    img: "http://suz.cvut.cz/sites/default/files/styles/gallery_full/public/img/article/gallery/jidelna1.jpg?itok=N7Kt38mJ",
+    openingHours: "Po - Pá 7:30 - 10:00 10:45 - 14:30",
+    scrapingStartedAt: dayjs("2022-05-03").toDate(),
+  },
+  "Výdejna Horská": {
+    menuUrl: "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=6",
+    address: "Horská 2040/3, 128 00 Nové Město",
+    img: "https://www.suz.cvut.cz/sites/default/files/imce/horska-3.jpg",
+    openingHours: "Po - Pá 11:00 - 14:00",
+    scrapingStartedAt: dayjs("2022-05-03").toDate(),
+  },
+  "Výdejna Karlovo náměstí": {
+    menuUrl: "http://agata.suz.cvut.cz/jidelnicky/?clPodsystem=8",
+    address: "Karlovo nám. 293/13, 120 00 Nové Město",
+    img: "http://suz.cvut.cz/sites/default/files/styles/gallery_full/public/img/article/gallery/kn-1.jpg?itok=mhdt5XJP",
+    openingHours: "Po - Čt 10:30 - 14:30, Pá 10:30 - 14:00",
+    scrapingStartedAt: dayjs("2022-05-03").toDate(),
+  },
 };
 
 @Service()
@@ -73,18 +141,25 @@ class ImportService {
 
   async createRestaurants() {
     await this.restaurantService.findRestaurants();
-    for (const restaurant of Object.keys(restaurantsUrl)) {
+    for (const restaurant of Object.keys(restaurantsDefinition)) {
       let dbRestaurant = await this.restaurantService.findRestaurantByName(
         restaurant
       );
       if (!dbRestaurant) {
-        // @ts-ignore
-        const restaurantUrl: string = restaurantsUrl[restaurant];
+        const restaurantDefinition: {
+          menuUrl: string;
+          address: string;
+          openingHours: string;
+          img: string;
+          scrapingStartedAt: Date;
+        } =
+          // @ts-ignore
+          restaurantsDefinition[restaurant];
 
-        dbRestaurant = await this.restaurantService.createRestaurant(
-          restaurant,
-          restaurantUrl
-        );
+        dbRestaurant = await this.restaurantService.createRestaurant({
+          name: restaurant,
+          ...restaurantDefinition,
+        });
       }
     }
   }

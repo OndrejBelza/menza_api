@@ -7,6 +7,7 @@ CREATE TABLE "Restaurant" (
     "openingHours" TEXT NOT NULL,
     "img" TEXT NOT NULL,
     "scrape" BOOLEAN NOT NULL DEFAULT true,
+    "scrapingStartedAt" DATE NOT NULL,
 
     CONSTRAINT "Restaurant_pkey" PRIMARY KEY ("id")
 );

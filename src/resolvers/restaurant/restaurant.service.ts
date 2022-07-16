@@ -18,19 +18,31 @@ class RestaurantService {
     return this.prismaService.restaurant.findFirst({ where: { name } });
   }
 
-  async createRestaurant(name: string, menuUrl: string): Promise<Restaurant> {
+  async createRestaurant(input: {
+    name: string;
+    menuUrl: string;
+    openingHours: string;
+    address: string;
+    img: string;
+  }): Promise<Restaurant> {
     return this.prismaService.restaurant.create({
       data: {
-        name,
-        menuUrl,
+        ...input,
+        scrapingStartedAt: new Date(),
       },
     });
   }
 
   async updateRestaurant(
     id: string,
-    name: string,
-    menuUrl: string
+    input: {
+      name?: string;
+      menuUrl?: string;
+      openingHours?: string;
+      address?: string;
+      img?: string;
+      scrapingStartedAt?: Date;
+    }
   ): Promise<Restaurant> {
     const restaurant = await this.findRestaurant(id);
     if (!restaurant) throw new Error("Restaurant does't exit!");
@@ -39,8 +51,7 @@ class RestaurantService {
         id,
       },
       data: {
-        name,
-        menuUrl,
+        ...input,
       },
     });
   }
