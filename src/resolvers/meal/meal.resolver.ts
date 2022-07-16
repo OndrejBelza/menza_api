@@ -8,11 +8,12 @@ import {
   UseMiddleware,
 } from "type-graphql";
 import { Service } from "typedi";
+import MealPicturesLoader from "../../dataloaders/mealPicturesLoader";
 import { AdminGuard } from "../../middlewares/admin.middleware";
 import normalizeMealName from "../../utils/normalizeMealName";
 import CategoryService from "../category/category.service";
 import BaseMealPicture from "../mealPicture/baseMealPicture";
-import MealPictureService from "../mealPicture/mealPicture.service";
+// import MealPictureService from "../mealPicture/mealPicture.service";
 import BaseMealPrice from "../mealPrice/baseMealPrice";
 import MealPriceService from "../mealPrice/mealPrice.service";
 import BaseMeal from "./baseMeal";
@@ -25,8 +26,9 @@ class MealResolver {
   constructor(
     private mealService: MealService,
     private categoryService: CategoryService,
-    private mealPicturesService: MealPictureService,
-    private mealPriceService: MealPriceService
+    // private mealPicturesService: MealPictureService,
+    private mealPriceService: MealPriceService,
+    private mealPicturesLoader: MealPicturesLoader
   ) {}
 
   @FieldResolver()
@@ -36,7 +38,8 @@ class MealResolver {
 
   @FieldResolver()
   async pictures(@Root() meal: Meal): Promise<BaseMealPicture[]> {
-    return this.mealPicturesService.findMealPictures(meal.id);
+    return this.mealPicturesLoader.load(meal.id);
+    // return this.mealPicturesService.findMealPictures(meal.id);
   }
 
   @FieldResolver()
