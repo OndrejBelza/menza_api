@@ -4,7 +4,6 @@ declare global {
       PORT: string;
       CRON_MONITOR_URL: string;
       DATABASE_URL: string;
-      APP_ORIGIN: string;
       ADMIN_KEY: string;
       AWS_ACCESS_KEY_ID: string;
       AWS_BUCKET: string;
