@@ -222,7 +222,7 @@ export class JobController {
     private scrapingService: ScrapingService
   ) {}
 
-  @Cron("scrape-menza", "0 9-20 * * 1-5")
+  @Cron("scrape-menza", "0 9-20 * * *")
   async scrape(): Promise<void> {
     const restaurants = await this.restaurantService.findRestaurants();
 
