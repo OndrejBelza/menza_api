@@ -13,6 +13,15 @@ export class Restaurant {
   menuUrl: string;
 
   @Field()
+  address: string;
+
+  @Field()
+  openingHours: string;
+
+  @Field()
+  img: string;
+
+  @Field()
   scrape: boolean;
 
   @Field(() => [MealPrice])
