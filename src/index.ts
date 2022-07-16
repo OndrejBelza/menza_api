@@ -45,6 +45,7 @@ async function main() {
       container: Container,
       validate: false,
     }),
+    introspection: true,
     context: ({ req, res }): MyContext => ({ req, res }),
     plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
   });
