@@ -134,7 +134,7 @@ export class ScrapingService {
   async uploadImage(data: any, filename: string, contentType: string) {
     return this.s3Service
       .upload({
-        Bucket: process.env.AWS_BUCKET,
+        Bucket: process.env.AWS_BUCKET || "menza",
         Key: filename,
         Body: data,
         ACL: "public-read",

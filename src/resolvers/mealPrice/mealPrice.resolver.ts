@@ -8,10 +8,10 @@ import {
   Root,
 } from "type-graphql";
 import { Service } from "typedi";
+import MealLoader from "../../dataloaders/mealLoader";
+import RestaurantLoader from "../../dataloaders/restaurantLoader";
 import BaseMeal from "../meal/baseMeal";
-import MealService from "../meal/meal.service";
 import BaseRestaurant from "../restaurant/baseRestaurant";
-import RestaurantService from "../restaurant/restaurant.service";
 import BaseMealPrice from "./baseMealPrice";
 import {
   CreateMealPriceInput,
@@ -25,22 +25,22 @@ import MealPriceService from "./mealPrice.service";
 class MealPriceResolver {
   constructor(
     private mealPriceService: MealPriceService,
-    private mealService: MealService,
-    private restaurantService: RestaurantService
+    private mealLoader: MealLoader,
+    private restaurantLoader: RestaurantLoader
   ) {}
 
   @FieldResolver()
   async meal(
     @Root() mealPrice: BaseMealPrice & { mealId: string }
-  ): Promise<BaseMeal | null> {
-    return this.mealService.findMeal(mealPrice.mealId);
+  ): Promise<BaseMeal | undefined> {
+    return this.mealLoader.load(mealPrice.mealId);
   }
 
   @FieldResolver()
   async restaurant(
     @Root() mealPrice: BaseMealPrice & { restaurantId: string }
-  ): Promise<BaseRestaurant | null> {
-    return this.restaurantService.findRestaurant(mealPrice.restaurantId);
+  ): Promise<BaseRestaurant | undefined> {
+    return this.restaurantLoader.load(mealPrice.restaurantId);
   }
 
   @Query(() => [MealPrice])

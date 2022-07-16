@@ -8,14 +8,13 @@ import {
   UseMiddleware,
 } from "type-graphql";
 import { Service } from "typedi";
+import CategoryLoader from "../../dataloaders/categoryLoader";
 import MealPicturesLoader from "../../dataloaders/mealPicturesLoader";
+import MealPricesLoader from "../../dataloaders/mealPricesLoader";
 import { AdminGuard } from "../../middlewares/admin.middleware";
 import normalizeMealName from "../../utils/normalizeMealName";
-import CategoryService from "../category/category.service";
 import BaseMealPicture from "../mealPicture/baseMealPicture";
-// import MealPictureService from "../mealPicture/mealPicture.service";
 import BaseMealPrice from "../mealPrice/baseMealPrice";
-import MealPriceService from "../mealPrice/mealPrice.service";
 import BaseMeal from "./baseMeal";
 import { CreateMealInput, Meal, MealOption, UpdateMealInput } from "./meal.gql";
 import MealService from "./meal.service";
@@ -25,26 +24,24 @@ import MealService from "./meal.service";
 class MealResolver {
   constructor(
     private mealService: MealService,
-    private categoryService: CategoryService,
-    // private mealPicturesService: MealPictureService,
-    private mealPriceService: MealPriceService,
-    private mealPicturesLoader: MealPicturesLoader
+    private mealPicturesLoader: MealPicturesLoader,
+    private categoryLoader: CategoryLoader,
+    private mealPricesLoader: MealPricesLoader
   ) {}
 
   @FieldResolver()
   category(@Root() meal: Meal & { categoryId: string }) {
-    return this.categoryService.findCategory(meal.categoryId);
+    return this.categoryLoader.load(meal.categoryId);
   }
 
   @FieldResolver()
   async pictures(@Root() meal: Meal): Promise<BaseMealPicture[]> {
     return this.mealPicturesLoader.load(meal.id);
-    // return this.mealPicturesService.findMealPictures(meal.id);
   }
 
   @FieldResolver()
   async prices(@Root() meal: Meal): Promise<BaseMealPrice[]> {
-    return this.mealPriceService.findMealPrices(meal.id);
+    return this.mealPricesLoader.load(meal.id);
   }
 
   @Query(() => [Meal])

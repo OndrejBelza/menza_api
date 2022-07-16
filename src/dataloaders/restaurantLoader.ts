@@ -1,35 +1,35 @@
-import { MealPicture } from "@prisma/client";
+import { Restaurant } from "@prisma/client";
 import DataLoader from "dataloader";
 import { Service } from "typedi";
 import PrismaService from "../services/prisma.service";
 
 @Service()
-class MealPicturesLoader {
+class RestaurantLoader {
   private loader;
   constructor(private prismaService: PrismaService) {
-    this.loader = new DataLoader<string, MealPicture[]>((keys) =>
+    this.loader = new DataLoader<string, Restaurant | undefined>((keys) =>
       this.batchLoad(keys)
     );
   }
 
   private async batchLoad(
     keys: readonly string[]
-  ): Promise<Array<MealPicture[]>> {
-    const pictures = await this.prismaService.mealPicture.findMany({
+  ): Promise<Array<Restaurant | undefined>> {
+    const restaurants = await this.prismaService.restaurant.findMany({
       where: {
-        mealId: {
+        id: {
           in: [...keys],
         },
       },
     });
     return keys.map((key) =>
-      pictures.filter((picture) => picture.mealId === key)
+      restaurants.find((restaurant) => restaurant.id === key)
     );
   }
 
-  async load(key: string): Promise<MealPicture[]> {
+  async load(key: string): Promise<Restaurant | undefined> {
     return this.loader.load(key);
   }
 }
 
-export default MealPicturesLoader;
+export default RestaurantLoader;

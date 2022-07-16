@@ -1,9 +1,9 @@
 import { Arg, FieldResolver, Query, Resolver, Root } from "type-graphql";
 import { Service } from "typedi";
+import RestaurantLoader from "../../dataloaders/restaurantLoader";
 import BaseMealPrice from "../mealPrice/baseMealPrice";
 import MealPriceService from "../mealPrice/mealPrice.service";
 import BaseRestaurant from "../restaurant/baseRestaurant";
-import RestaurantService from "../restaurant/restaurant.service";
 import BaseMenu from "./baseMenu";
 import { Menu } from "./menu.gql";
 
@@ -11,13 +11,15 @@ import { Menu } from "./menu.gql";
 @Resolver(Menu)
 export class MenuResolver {
   constructor(
-    private restaurantService: RestaurantService,
+    private restaurantLoader: RestaurantLoader,
     private mealPriceService: MealPriceService
   ) {}
 
   @FieldResolver()
-  async restaurant(@Root() menu: BaseMenu): Promise<BaseRestaurant | null> {
-    return this.restaurantService.findRestaurant(menu.restaurantId);
+  async restaurant(
+    @Root() menu: BaseMenu
+  ): Promise<BaseRestaurant | undefined> {
+    return this.restaurantLoader.load(menu.restaurantId);
   }
 
   @FieldResolver()

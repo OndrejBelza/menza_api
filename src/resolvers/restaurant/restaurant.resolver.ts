@@ -9,9 +9,9 @@ import {
   UseMiddleware,
 } from "type-graphql";
 import { Service } from "typedi";
+import RestaurantMealPricesLoader from "../../dataloaders/restaurantMealPricesLoader";
 import { AdminGuard } from "../../middlewares/admin.middleware";
 import BaseMealPrice from "../mealPrice/baseMealPrice";
-import MealPriceService from "../mealPrice/mealPrice.service";
 import BaseRestaurant from "./baseRestaurant";
 import {
   CreateRestaurantInput,
@@ -25,14 +25,14 @@ import RestaurantService from "./restaurant.service";
 class RestaurantResolver {
   constructor(
     private restaurantService: RestaurantService,
-    private mealPriceService: MealPriceService
+    private restaurantMealPricesLoader: RestaurantMealPricesLoader
   ) {}
 
   @FieldResolver()
   async mealPrices(
     @Root() restaurant: BaseRestaurant
   ): Promise<BaseMealPrice[]> {
-    return this.mealPriceService.findRestaurantMealsPrices(restaurant.id);
+    return this.restaurantMealPricesLoader.load(restaurant.id);
   }
 
   @Query(() => [Restaurant])

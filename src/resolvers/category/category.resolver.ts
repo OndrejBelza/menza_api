@@ -8,8 +8,8 @@ import {
   UseMiddleware,
 } from "type-graphql";
 import { Service } from "typedi";
+import MealsInCategoryLoader from "../../dataloaders/mealsInCategoryLoader";
 import { AdminGuard } from "../../middlewares/admin.middleware";
-import MealService from "../meal/meal.service";
 import BaseCategory from "./baseCategory";
 import { Category, UpdateCategoryInput } from "./category.gql";
 import CategoryService from "./category.service";
@@ -19,12 +19,12 @@ import CategoryService from "./category.service";
 class CategoryResolver {
   constructor(
     private categoryService: CategoryService,
-    private mealService: MealService
+    private mealsInCategoryLoader: MealsInCategoryLoader
   ) {}
 
   @FieldResolver()
   async meals(@Root() category: Category) {
-    return this.mealService.findMelasInCategory(category.name);
+    return this.mealsInCategoryLoader.load(category.id);
   }
 
   @Query(() => [Category])

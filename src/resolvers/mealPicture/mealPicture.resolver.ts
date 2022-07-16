@@ -9,11 +9,11 @@ import {
   UseMiddleware,
 } from "type-graphql";
 import { Service } from "typedi";
+import MealLoader from "../../dataloaders/mealLoader";
+import RestaurantLoader from "../../dataloaders/restaurantLoader";
 import { AdminGuard } from "../../middlewares/admin.middleware";
 import BaseMeal from "../meal/baseMeal";
-import MealService from "../meal/meal.service";
 import BaseRestaurant from "../restaurant/baseRestaurant";
-import RestaurantService from "../restaurant/restaurant.service";
 import BaseMealPicture from "./baseMealPicture";
 import {
   CreateMealPictureInput,
@@ -27,22 +27,22 @@ import MealPictureService from "./mealPicture.service";
 class MealPictureResolver {
   constructor(
     private mealPictureService: MealPictureService,
-    private mealService: MealService,
-    private restaurantService: RestaurantService
+    private mealLoader: MealLoader,
+    private restaurantLoader: RestaurantLoader
   ) {}
 
   @FieldResolver()
   async meal(
     @Root() mealPicture: MealPicture & { mealId: string }
-  ): Promise<BaseMeal | null> {
-    return this.mealService.findMeal(mealPicture.mealId);
+  ): Promise<BaseMeal | undefined> {
+    return this.mealLoader.load(mealPicture.mealId);
   }
 
   @FieldResolver()
   async restaurant(
     @Root() mealPicture: MealPicture & { restaurantId: string }
-  ): Promise<BaseRestaurant | null> {
-    return this.restaurantService.findRestaurant(mealPicture.restaurantId);
+  ): Promise<BaseRestaurant | undefined> {
+    return this.restaurantLoader.load(mealPicture.restaurantId);
   }
 
   @Query(() => [MealPicture])
