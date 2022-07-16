@@ -4574,6 +4574,56 @@
         },
         {
           "attributes": {
+            "name": "Smažený sýr, vařené brambory, tatarská omáčka",
+            "category": "mainDish",
+            "nameNormalized": "Smazenysyrvarenebramborytatarskaomacka",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 80,
+                    "priceRegular": 105,
+                    "location": "technicka",
+                    "date": "2022-05-26"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 85,
+                    "priceRegular": 110,
+                    "location": "technicka",
+                    "date": "2022-06-30"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 85,
+                    "priceRegular": 110,
+                    "location": "technicka",
+                    "date": "2022-07-12"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 85,
+                    "priceRegular": 110,
+                    "location": "technicka",
+                    "date": "2022-07-14"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_3_and_x_File_IMG_2022_05_26_101559613_1d708739bf.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
             "name": "Žloutkový věneček",
             "category": "desert",
             "nameNormalized": "Zloutkovyvenecek",
@@ -4618,48 +4668,6 @@
               ]
             },
             "img": { "data": null }
-          }
-        },
-        {
-          "attributes": {
-            "name": "Smažený sýr, vařené brambory, tatarská omáčka",
-            "category": "mainDish",
-            "nameNormalized": "Smazenysyrvarenebramborytatarskaomacka",
-            "meal_prices": {
-              "data": [
-                {
-                  "attributes": {
-                    "priceStudent": 80,
-                    "priceRegular": 105,
-                    "location": "technicka",
-                    "date": "2022-05-26"
-                  }
-                },
-                {
-                  "attributes": {
-                    "priceStudent": 85,
-                    "priceRegular": 110,
-                    "location": "technicka",
-                    "date": "2022-06-30"
-                  }
-                },
-                {
-                  "attributes": {
-                    "priceStudent": 85,
-                    "priceRegular": 110,
-                    "location": "technicka",
-                    "date": "2022-07-12"
-                  }
-                }
-              ]
-            },
-            "img": {
-              "data": {
-                "attributes": {
-                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_3_and_x_File_IMG_2022_05_26_101559613_1d708739bf.jpg"
-                }
-              }
-            }
           }
         },
         {
@@ -6379,6 +6387,14 @@
                     "priceRegular": 110,
                     "location": "strahov",
                     "date": "2022-06-29"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 85,
+                    "priceRegular": 110,
+                    "location": "strahov",
+                    "date": "2022-07-14"
                   }
                 }
               ]
@@ -8522,44 +8538,54 @@
         },
         {
           "attributes": {
-            "name": "Hovězí maso na česneku, dušený špenát, bramborové knedlíky",
-            "category": "mainDish",
-            "nameNormalized": "Hovezimasonacesnekudusenyspenatbramboroveknedliky",
+            "name": "Pohár Malina (tvaroh)",
+            "category": "desert",
+            "nameNormalized": "PoharMalina(tvaroh)",
             "meal_prices": {
               "data": [
                 {
                   "attributes": {
-                    "priceStudent": 91,
-                    "priceRegular": 116,
-                    "location": "studentskyDum",
+                    "priceStudent": 34,
+                    "priceRegular": 34,
+                    "location": "strahov",
                     "date": "2022-05-31"
                   }
                 },
                 {
                   "attributes": {
-                    "priceStudent": 89,
-                    "priceRegular": 114,
-                    "location": "technicka",
-                    "date": "2022-06-07"
+                    "priceStudent": 34,
+                    "priceRegular": 34,
+                    "location": "strahov",
+                    "date": "2022-06-08"
                   }
                 },
                 {
                   "attributes": {
-                    "priceStudent": 89,
-                    "priceRegular": 114,
-                    "location": "technicka",
+                    "priceStudent": 34,
+                    "priceRegular": 34,
+                    "location": "strahov",
+                    "date": "2022-06-10"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 34,
+                    "priceRegular": 34,
+                    "location": "strahov",
+                    "date": "2022-06-14"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 34,
+                    "priceRegular": 34,
+                    "location": "strahov",
                     "date": "2022-07-12"
                   }
                 }
               ]
             },
-            "img": {
-              "data": {
-                "attributes": {
-                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_2_and_x_File_IMG_2022_05_31_102239936_3cf4c5aebd.JPG"
-                }
-              }
-            }
+            "img": { "data": null }
           }
         },
         {
@@ -8591,6 +8617,14 @@
                     "priceRegular": 34,
                     "location": "strahov",
                     "date": "2022-06-15"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 34,
+                    "priceRegular": 34,
+                    "location": "strahov",
+                    "date": "2022-07-13"
                   }
                 }
               ]
@@ -8672,88 +8706,6 @@
         },
         {
           "attributes": {
-            "name": "Salát Caprese",
-            "category": "saladsAndDishes",
-            "nameNormalized": "SalatCaprese",
-            "meal_prices": {
-              "data": [
-                {
-                  "attributes": {
-                    "priceStudent": 59.99,
-                    "priceRegular": 85,
-                    "location": "strahov",
-                    "date": "2022-05-31"
-                  }
-                },
-                {
-                  "attributes": {
-                    "priceStudent": 59.99,
-                    "priceRegular": 85,
-                    "location": "strahov",
-                    "date": "2022-06-08"
-                  }
-                },
-                {
-                  "attributes": {
-                    "priceStudent": 59.99,
-                    "priceRegular": 85,
-                    "location": "studentskyDum",
-                    "date": "2022-06-13"
-                  }
-                },
-                {
-                  "attributes": {
-                    "priceStudent": 59.99,
-                    "priceRegular": 85,
-                    "location": "studentskyDum",
-                    "date": "2022-06-14"
-                  }
-                },
-                {
-                  "attributes": {
-                    "priceStudent": 59.99,
-                    "priceRegular": 85,
-                    "location": "strahov",
-                    "date": "2022-06-20"
-                  }
-                },
-                {
-                  "attributes": {
-                    "priceStudent": 65,
-                    "priceRegular": 90,
-                    "location": "technicka",
-                    "date": "2022-06-21"
-                  }
-                },
-                {
-                  "attributes": {
-                    "priceStudent": 59.99,
-                    "priceRegular": 85,
-                    "location": "strahov",
-                    "date": "2022-06-28"
-                  }
-                },
-                {
-                  "attributes": {
-                    "priceStudent": 59.99,
-                    "priceRegular": 85,
-                    "location": "strahov",
-                    "date": "2022-07-12"
-                  }
-                }
-              ]
-            },
-            "img": {
-              "data": {
-                "attributes": {
-                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_05_31_100051254_2775021593.JPG"
-                }
-              }
-            }
-          }
-        },
-        {
-          "attributes": {
             "name": "Krůtí prsa na zeleninovém salátu, bylinkový dip, bagetka",
             "category": "specialOfTheDay",
             "nameNormalized": "Krutiprsanazeleninovemsalatubylinkovydipbagetka",
@@ -8780,9 +8732,9 @@
         },
         {
           "attributes": {
-            "name": "Pohár Malina (tvaroh)",
+            "name": "Pohár Mandarinka",
             "category": "desert",
-            "nameNormalized": "PoharMalina(tvaroh)",
+            "nameNormalized": "PoharMandarinka",
             "meal_prices": {
               "data": [
                 {
@@ -8790,7 +8742,7 @@
                     "priceStudent": 34,
                     "priceRegular": 34,
                     "location": "strahov",
-                    "date": "2022-05-31"
+                    "date": "2022-06-01"
                   }
                 },
                 {
@@ -8798,7 +8750,7 @@
                     "priceStudent": 34,
                     "priceRegular": 34,
                     "location": "strahov",
-                    "date": "2022-06-08"
+                    "date": "2022-06-03"
                   }
                 },
                 {
@@ -8806,7 +8758,7 @@
                     "priceStudent": 34,
                     "priceRegular": 34,
                     "location": "strahov",
-                    "date": "2022-06-10"
+                    "date": "2022-06-07"
                   }
                 },
                 {
@@ -8814,7 +8766,7 @@
                     "priceStudent": 34,
                     "priceRegular": 34,
                     "location": "strahov",
-                    "date": "2022-06-14"
+                    "date": "2022-07-14"
                   }
                 },
                 {
@@ -8822,7 +8774,7 @@
                     "priceStudent": 34,
                     "priceRegular": 34,
                     "location": "strahov",
-                    "date": "2022-07-12"
+                    "date": "2022-07-15"
                   }
                 }
               ]
@@ -9530,6 +9482,88 @@
         },
         {
           "attributes": {
+            "name": "Salát Caprese",
+            "category": "saladsAndDishes",
+            "nameNormalized": "SalatCaprese",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 59.99,
+                    "priceRegular": 85,
+                    "location": "strahov",
+                    "date": "2022-05-31"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 59.99,
+                    "priceRegular": 85,
+                    "location": "strahov",
+                    "date": "2022-06-08"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 59.99,
+                    "priceRegular": 85,
+                    "location": "studentskyDum",
+                    "date": "2022-06-13"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 59.99,
+                    "priceRegular": 85,
+                    "location": "studentskyDum",
+                    "date": "2022-06-14"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 59.99,
+                    "priceRegular": 85,
+                    "location": "strahov",
+                    "date": "2022-06-20"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 65,
+                    "priceRegular": 90,
+                    "location": "technicka",
+                    "date": "2022-06-21"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 59.99,
+                    "priceRegular": 85,
+                    "location": "strahov",
+                    "date": "2022-06-28"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 59.99,
+                    "priceRegular": 85,
+                    "location": "strahov",
+                    "date": "2022-07-12"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_05_31_100051254_2775021593.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
             "name": "Zelná s párkem",
             "category": "soup",
             "nameNormalized": "Zelnasparkem",
@@ -9720,38 +9754,52 @@
         },
         {
           "attributes": {
-            "name": "Pohár Mandarinka",
-            "category": "desert",
-            "nameNormalized": "PoharMandarinka",
+            "name": "Hovězí maso na česneku, dušený špenát, bramborové knedlíky",
+            "category": "mainDish",
+            "nameNormalized": "Hovezimasonacesnekudusenyspenatbramboroveknedliky",
             "meal_prices": {
               "data": [
                 {
                   "attributes": {
-                    "priceStudent": 34,
-                    "priceRegular": 34,
-                    "location": "strahov",
-                    "date": "2022-06-01"
+                    "priceStudent": 91,
+                    "priceRegular": 116,
+                    "location": "studentskyDum",
+                    "date": "2022-05-31"
                   }
                 },
                 {
                   "attributes": {
-                    "priceStudent": 34,
-                    "priceRegular": 34,
-                    "location": "strahov",
-                    "date": "2022-06-03"
-                  }
-                },
-                {
-                  "attributes": {
-                    "priceStudent": 34,
-                    "priceRegular": 34,
-                    "location": "strahov",
+                    "priceStudent": 89,
+                    "priceRegular": 114,
+                    "location": "technicka",
                     "date": "2022-06-07"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 89,
+                    "priceRegular": 114,
+                    "location": "technicka",
+                    "date": "2022-07-12"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 89,
+                    "priceRegular": 114,
+                    "location": "technicka",
+                    "date": "2022-07-14"
                   }
                 }
               ]
             },
-            "img": { "data": null }
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_2_and_x_File_IMG_2022_05_31_102239936_3cf4c5aebd.JPG"
+                }
+              }
+            }
           }
         },
         {
@@ -9835,6 +9883,14 @@
                     "priceRegular": 20,
                     "location": "technicka",
                     "date": "2022-06-10"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 12,
+                    "priceRegular": 20,
+                    "location": "technicka",
+                    "date": "2022-07-15"
                   }
                 }
               ]
@@ -11258,6 +11314,14 @@
                     "location": "studentskyDum",
                     "date": "2022-06-23"
                   }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 67,
+                    "priceRegular": 92,
+                    "location": "technicka",
+                    "date": "2022-07-14"
+                  }
                 }
               ]
             },
@@ -11665,6 +11729,14 @@
                     "priceRegular": 34,
                     "location": "strahov",
                     "date": "2022-06-23"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 34,
+                    "priceRegular": 34,
+                    "location": "strahov",
+                    "date": "2022-07-13"
                   }
                 }
               ]
@@ -12131,6 +12203,14 @@
                     "priceRegular": 20,
                     "location": "technicka",
                     "date": "2022-07-11"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 12,
+                    "priceRegular": 20,
+                    "location": "strahov",
+                    "date": "2022-07-14"
                   }
                 }
               ]
@@ -13244,6 +13324,14 @@
                     "location": "strahov",
                     "date": "2022-06-06"
                   }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 81.99,
+                    "priceRegular": 107,
+                    "location": "strahov",
+                    "date": "2022-07-13"
+                  }
                 }
               ]
             },
@@ -13482,6 +13570,56 @@
         },
         {
           "attributes": {
+            "name": "Hovězí nudličky  stroganov, dušená rýže",
+            "category": "mainDish",
+            "nameNormalized": "Hovezinudlickystroganovdusenaryze",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 90,
+                    "priceRegular": 115,
+                    "location": "technicka",
+                    "date": "2022-06-08"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 84,
+                    "priceRegular": 109,
+                    "location": "technicka",
+                    "date": "2022-06-22"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 90,
+                    "priceRegular": 115,
+                    "location": "technicka",
+                    "date": "2022-07-13"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 84,
+                    "priceRegular": 109,
+                    "location": "technicka",
+                    "date": "2022-07-15"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_3_and_x_File_IMG_2022_06_07_153855291_b5c3c802dd.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
             "name": "Zapečené těstoviny se  špenátem a sýrem, červená  řepa",
             "category": "mealsWithoutMeat",
             "nameNormalized": "Zapecenetestovinysespenatemasyremcervenarepa",
@@ -13709,48 +13847,6 @@
               "data": {
                 "attributes": {
                   "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_06_07_101950447_85ed00c350.JPG"
-                }
-              }
-            }
-          }
-        },
-        {
-          "attributes": {
-            "name": "Římský salát s kuřecím masem s sebou",
-            "category": "saladsAndDishes",
-            "nameNormalized": "Rimskysalatskurecimmasemssebou",
-            "meal_prices": {
-              "data": [
-                {
-                  "attributes": {
-                    "priceStudent": 91,
-                    "priceRegular": 116,
-                    "location": "strahov",
-                    "date": "2022-06-07"
-                  }
-                },
-                {
-                  "attributes": {
-                    "priceStudent": 91,
-                    "priceRegular": 116,
-                    "location": "strahov",
-                    "date": "2022-06-20"
-                  }
-                },
-                {
-                  "attributes": {
-                    "priceStudent": 91,
-                    "priceRegular": 116,
-                    "location": "strahov",
-                    "date": "2022-06-30"
-                  }
-                }
-              ]
-            },
-            "img": {
-              "data": {
-                "attributes": {
-                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_06_07_102145725_8d3a016ffe.JPG"
                 }
               }
             }
@@ -14172,25 +14268,41 @@
         },
         {
           "attributes": {
-            "name": "Hovězí nudličky  stroganov, dušená rýže",
-            "category": "mainDish",
-            "nameNormalized": "Hovezinudlickystroganovdusenaryze",
+            "name": "Římský salát s kuřecím masem s sebou",
+            "category": "saladsAndDishes",
+            "nameNormalized": "Rimskysalatskurecimmasemssebou",
             "meal_prices": {
               "data": [
                 {
                   "attributes": {
-                    "priceStudent": 90,
-                    "priceRegular": 115,
-                    "location": "technicka",
-                    "date": "2022-06-08"
+                    "priceStudent": 91,
+                    "priceRegular": 116,
+                    "location": "strahov",
+                    "date": "2022-06-07"
                   }
                 },
                 {
                   "attributes": {
-                    "priceStudent": 84,
-                    "priceRegular": 109,
-                    "location": "technicka",
-                    "date": "2022-06-22"
+                    "priceStudent": 91,
+                    "priceRegular": 116,
+                    "location": "strahov",
+                    "date": "2022-06-20"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 91,
+                    "priceRegular": 116,
+                    "location": "strahov",
+                    "date": "2022-06-30"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 91,
+                    "priceRegular": 116,
+                    "location": "strahov",
+                    "date": "2022-07-13"
                   }
                 }
               ]
@@ -14198,7 +14310,7 @@
             "img": {
               "data": {
                 "attributes": {
-                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_3_and_x_File_IMG_2022_06_07_153855291_b5c3c802dd.jpg"
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_06_07_102145725_8d3a016ffe.JPG"
                 }
               }
             }
@@ -14512,26 +14624,6 @@
         },
         {
           "attributes": {
-            "name": "Krémová polévka z  hlívy ústřičné",
-            "category": "soup",
-            "nameNormalized": "Kremovapolevkazhlivyustricne",
-            "meal_prices": {
-              "data": [
-                {
-                  "attributes": {
-                    "priceStudent": 12,
-                    "priceRegular": 20,
-                    "location": "technicka",
-                    "date": "2022-06-08"
-                  }
-                }
-              ]
-            },
-            "img": { "data": null }
-          }
-        },
-        {
-          "attributes": {
             "name": "Vepřová plec  na smetaně, houskové knedlíky",
             "category": "mainDish",
             "nameNormalized": "Veprovaplecnasmetanehouskoveknedliky",
@@ -14655,6 +14747,14 @@
                     "priceRegular": 155,
                     "location": "technicka",
                     "date": "2022-06-08"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 124.99,
+                    "priceRegular": 150,
+                    "location": "technicka",
+                    "date": "2022-07-13"
                   }
                 }
               ]
@@ -14892,6 +14992,40 @@
         },
         {
           "attributes": {
+            "name": "Boloňské ragů s kořenovou zeleninou Garden Gourmet a penne",
+            "category": "specialOfTheDay",
+            "nameNormalized": "BolonskeraguskorenovouzeleninouGardenGourmetapenne",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 80.99,
+                    "priceRegular": 106,
+                    "location": "technicka",
+                    "date": "2022-06-08"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 81.99,
+                    "priceRegular": 107,
+                    "location": "technicka",
+                    "date": "2022-07-13"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_3_and_x_File_IMG_2022_06_07_154015932_0ec801605b.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
             "name": "SALÁTOVÝ BAR 190,- Kč / 1 kg",
             "category": "coldMeals",
             "nameNormalized": "SALATOVYBAR190-Kc/1kg",
@@ -14952,28 +15086,30 @@
         },
         {
           "attributes": {
-            "name": "Boloňské ragů s kořenovou zeleninou Garden Gourmet a penne",
-            "category": "specialOfTheDay",
-            "nameNormalized": "BolonskeraguskorenovouzeleninouGardenGourmetapenne",
+            "name": "Krémová polévka z  hlívy ústřičné",
+            "category": "soup",
+            "nameNormalized": "Kremovapolevkazhlivyustricne",
             "meal_prices": {
               "data": [
                 {
                   "attributes": {
-                    "priceStudent": 80.99,
-                    "priceRegular": 106,
+                    "priceStudent": 12,
+                    "priceRegular": 20,
                     "location": "technicka",
                     "date": "2022-06-08"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 12,
+                    "priceRegular": 20,
+                    "location": "technicka",
+                    "date": "2022-07-13"
                   }
                 }
               ]
             },
-            "img": {
-              "data": {
-                "attributes": {
-                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_3_and_x_File_IMG_2022_06_07_154015932_0ec801605b.jpg"
-                }
-              }
-            }
+            "img": { "data": null }
           }
         },
         {
@@ -15600,6 +15736,22 @@
                     "location": "strahov",
                     "date": "2022-06-22"
                   }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 34,
+                    "priceRegular": 34,
+                    "location": "strahov",
+                    "date": "2022-07-14"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 34,
+                    "priceRegular": 34,
+                    "location": "strahov",
+                    "date": "2022-07-15"
+                  }
                 }
               ]
             },
@@ -15753,6 +15905,14 @@
                     "priceRegular": 100,
                     "location": "technicka",
                     "date": "2022-06-22"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 75,
+                    "priceRegular": 100,
+                    "location": "technicka",
+                    "date": "2022-07-14"
                   }
                 }
               ]
@@ -16220,6 +16380,14 @@
                     "location": "technicka",
                     "date": "2022-06-09"
                   }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 88,
+                    "priceRegular": 113,
+                    "location": "technicka",
+                    "date": "2022-07-14"
+                  }
                 }
               ]
             },
@@ -16245,6 +16413,14 @@
                     "priceRegular": 14,
                     "location": "technicka",
                     "date": "2022-06-10"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 14,
+                    "priceRegular": 14,
+                    "location": "technicka",
+                    "date": "2022-07-14"
                   }
                 }
               ]
@@ -16868,6 +17044,14 @@
                     "location": "technicka",
                     "date": "2022-06-10"
                   }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 64,
+                    "priceRegular": 89,
+                    "location": "technicka",
+                    "date": "2022-07-15"
+                  }
                 }
               ]
             },
@@ -16887,6 +17071,14 @@
                     "priceRegular": 98,
                     "location": "technicka",
                     "date": "2022-06-10"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 72,
+                    "priceRegular": 97,
+                    "location": "technicka",
+                    "date": "2022-07-15"
                   }
                 }
               ]
@@ -17040,6 +17232,14 @@
                     "location": "strahov",
                     "date": "2022-06-24"
                   }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 47.99,
+                    "priceRegular": 73,
+                    "location": "strahov",
+                    "date": "2022-07-13"
+                  }
                 }
               ]
             },
@@ -17065,6 +17265,14 @@
                     "priceRegular": 139,
                     "location": "technicka",
                     "date": "2022-06-10"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 113.99,
+                    "priceRegular": 139,
+                    "location": "technicka",
+                    "date": "2022-07-15"
                   }
                 }
               ]
@@ -17989,6 +18197,14 @@
                     "priceRegular": 80,
                     "location": "strahov",
                     "date": "2022-07-11"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 55,
+                    "priceRegular": 80,
+                    "location": "strahov",
+                    "date": "2022-07-15"
                   }
                 }
               ]
@@ -28700,17 +28916,37 @@
         },
         {
           "attributes": {
-            "name": "Rýžový nákyp se švestkami",
-            "category": "specialOfTheDay",
-            "nameNormalized": "Ryzovynakypsesvestkami",
+            "name": "Litý koláč s ovovcem",
+            "category": "desert",
+            "nameNormalized": "Litykolacsovovcem",
             "meal_prices": {
               "data": [
                 {
                   "attributes": {
-                    "priceStudent": 66,
-                    "priceRegular": 91,
+                    "priceStudent": 19,
+                    "priceRegular": 19,
                     "location": "strahov",
-                    "date": "2022-07-12"
+                    "date": "2022-07-13"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Smažený vepřový řízek, lehký bramborový salát/ vařené brambory, řez citronu",
+            "category": "mainDish",
+            "nameNormalized": "Smazenyveprovyrizeklehkybramborovysalat/varenebramboryrezcitronu",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 89,
+                    "priceRegular": 114,
+                    "location": "technicka",
+                    "date": "2022-07-13"
                   }
                 }
               ]
@@ -28718,7 +28954,7 @@
             "img": {
               "data": {
                 "attributes": {
-                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_12_075144855_8857371e6f.JPG"
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_3_and_x_File_IMG_2022_07_13_095716587_c76b4c1ef1.jpg"
                 }
               }
             }
@@ -28726,28 +28962,22 @@
         },
         {
           "attributes": {
-            "name": "Semolinové gemeli s tuňákem v smetanovo- limetkové omáčce",
-            "category": "minutes",
-            "nameNormalized": "Semolinovegemelistunakemvsmetanovo-limetkoveomacce",
+            "name": "Smažené kuřecí stripsy, lehký bramborový salát/ vařené brambory, řez citronu",
+            "category": "mainDish",
+            "nameNormalized": "Smazenekurecistripsylehkybramborovysalat/varenebramboryrezcitronu",
             "meal_prices": {
               "data": [
                 {
                   "attributes": {
-                    "priceStudent": 113.99,
-                    "priceRegular": 139,
+                    "priceStudent": 89,
+                    "priceRegular": 114,
                     "location": "technicka",
-                    "date": "2022-07-12"
+                    "date": "2022-07-13"
                   }
                 }
               ]
             },
-            "img": {
-              "data": {
-                "attributes": {
-                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_3_and_x_File_IMG_2022_07_12_104113447_89d0757a18.JPG"
-                }
-              }
-            }
+            "img": { "data": null }
           }
         },
         {
@@ -28794,112 +29024,6 @@
               ]
             },
             "img": { "data": null }
-          }
-        },
-        {
-          "attributes": {
-            "name": "Kuřecí minestrone",
-            "category": "soup",
-            "nameNormalized": "Kureciminestrone",
-            "meal_prices": {
-              "data": [
-                {
-                  "attributes": {
-                    "priceStudent": 12,
-                    "priceRegular": 20,
-                    "location": "strahov",
-                    "date": "2022-07-11"
-                  }
-                }
-              ]
-            },
-            "img": { "data": null }
-          }
-        },
-        {
-          "attributes": {
-            "name": "Candát na másle, grilovaná zelenina, brambory  vařené",
-            "category": "specialOfTheDay",
-            "nameNormalized": "Candatnamaslegrilovanazeleninabramboryvarene",
-            "meal_prices": {
-              "data": [
-                {
-                  "attributes": {
-                    "priceStudent": 100,
-                    "priceRegular": 125,
-                    "location": "strahov",
-                    "date": "2022-07-11"
-                  }
-                }
-              ]
-            },
-            "img": {
-              "data": {
-                "attributes": {
-                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_11_091030262_1e4b0b489d.JPG"
-                }
-              }
-            }
-          }
-        },
-        {
-          "attributes": {
-            "name": "Přírodní vepřové žebírko, rýže dušená/brambory vařené",
-            "category": "mainDish",
-            "nameNormalized": "Prirodniveprovezebirkoryzedusena/bramboryvarene",
-            "meal_prices": {
-              "data": [
-                {
-                  "attributes": {
-                    "priceStudent": 86,
-                    "priceRegular": 111,
-                    "location": "strahov",
-                    "date": "2022-07-11"
-                  }
-                }
-              ]
-            },
-            "img": {
-              "data": {
-                "attributes": {
-                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_11_091326367_adf47c65a9.JPG"
-                }
-              }
-            }
-          }
-        },
-        {
-          "attributes": {
-            "name": "Míchaný s kuřecím masem s sebou",
-            "category": "saladsAndDishes",
-            "nameNormalized": "Michanyskurecimmasemssebou",
-            "meal_prices": {
-              "data": [
-                {
-                  "attributes": {
-                    "priceStudent": 91,
-                    "priceRegular": 116,
-                    "location": "strahov",
-                    "date": "2022-07-07"
-                  }
-                },
-                {
-                  "attributes": {
-                    "priceStudent": 91,
-                    "priceRegular": 116,
-                    "location": "strahov",
-                    "date": "2022-07-11"
-                  }
-                }
-              ]
-            },
-            "img": {
-              "data": {
-                "attributes": {
-                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_11_114238052_e1c16d712d.JPG"
-                }
-              }
-            }
           }
         },
         {
@@ -29024,6 +29148,946 @@
                 }
               }
             }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Rýžový nákyp se švestkami",
+            "category": "specialOfTheDay",
+            "nameNormalized": "Ryzovynakypsesvestkami",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 66,
+                    "priceRegular": 91,
+                    "location": "strahov",
+                    "date": "2022-07-12"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_12_075144855_8857371e6f.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Semolinové gemeli s tuňákem v smetanovo- limetkové omáčce",
+            "category": "minutes",
+            "nameNormalized": "Semolinovegemelistunakemvsmetanovo-limetkoveomacce",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 113.99,
+                    "priceRegular": 139,
+                    "location": "technicka",
+                    "date": "2022-07-12"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_3_and_x_File_IMG_2022_07_12_104113447_89d0757a18.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Těstovinový salát s americkým dresinkem a kuřecím masem",
+            "category": "mainDish",
+            "nameNormalized": "Testovinovysalatsamerickymdresinkemakurecimmasem",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 73,
+                    "priceRegular": 98,
+                    "location": "technicka",
+                    "date": "2022-07-13"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Kuřecí minestrone",
+            "category": "soup",
+            "nameNormalized": "Kureciminestrone",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 12,
+                    "priceRegular": 20,
+                    "location": "strahov",
+                    "date": "2022-07-11"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Candát na másle, grilovaná zelenina, brambory  vařené",
+            "category": "specialOfTheDay",
+            "nameNormalized": "Candatnamaslegrilovanazeleninabramboryvarene",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 100,
+                    "priceRegular": 125,
+                    "location": "strahov",
+                    "date": "2022-07-11"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_11_091030262_1e4b0b489d.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Přírodní vepřové žebírko, rýže dušená/brambory vařené",
+            "category": "mainDish",
+            "nameNormalized": "Prirodniveprovezebirkoryzedusena/bramboryvarene",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 86,
+                    "priceRegular": 111,
+                    "location": "strahov",
+                    "date": "2022-07-11"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_11_091326367_adf47c65a9.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Jablečná mřížka s jablky a pudinkem",
+            "category": "desert",
+            "nameNormalized": "Jablecnamrizkasjablkyapudinkem",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 14,
+                    "priceRegular": 14,
+                    "location": "technicka",
+                    "date": "2022-07-13"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Hrstková",
+            "category": "soup",
+            "nameNormalized": "Hrstkova",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 12,
+                    "priceRegular": 20,
+                    "location": "strahov",
+                    "date": "2022-07-13"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Hovězí vývar s masem  a těstovinou",
+            "category": "soup",
+            "nameNormalized": "Hovezivyvarsmasematestovinou",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 12,
+                    "priceRegular": 20,
+                    "location": "strahov",
+                    "date": "2022-07-13"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Lososové filé pečené na másle, grilovaná zelenina, poečené brambory",
+            "category": "specialOfTheDay",
+            "nameNormalized": "Lososovefilepecenenamaslegrilovanazeleninapoecenebrambory",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 107,
+                    "priceRegular": 132,
+                    "location": "strahov",
+                    "date": "2022-07-13"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_13_094400801_6b1a788e0a.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Segedínský guláš vepřový, knedlíky houskové",
+            "category": "mainDish",
+            "nameNormalized": "Segedinskygulasveprovyknedlikyhouskove",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 81.99,
+                    "priceRegular": 107,
+                    "location": "strahov",
+                    "date": "2022-07-13"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_13_091124839_fc0b5ef3ee.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Přírodní kuřecí závitek, bramborové hranolky",
+            "category": "mainDish",
+            "nameNormalized": "Prirodnikurecizavitekbramborovehranolky",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 85,
+                    "priceRegular": 110,
+                    "location": "strahov",
+                    "date": "2022-07-13"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_13_094425510_cb09b48332.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Boloňské lasagne z vepřového masa",
+            "category": "mainDish",
+            "nameNormalized": "Bolonskelasagnezveprovehomasa",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 86,
+                    "priceRegular": 111,
+                    "location": "strahov",
+                    "date": "2022-07-13"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_13_091025556_acaf55a23b.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Květákový mozeček, brambory  vařené",
+            "category": "specialOfTheDay",
+            "nameNormalized": "Kvetakovymozecekbramboryvarene",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 74,
+                    "priceRegular": 99,
+                    "location": "strahov",
+                    "date": "2022-07-13"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_13_102616885_b94621201f.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Litý koláč s ovocem",
+            "category": "desert",
+            "nameNormalized": "Litykolacsovocem",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 19,
+                    "priceRegular": 19,
+                    "location": "strahov",
+                    "date": "2022-07-13"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Salát Hawaiský s kuřecím masem",
+            "category": "saladsAndDishes",
+            "nameNormalized": "SalatHawaiskyskurecimmasem",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 80.99,
+                    "priceRegular": 106,
+                    "location": "strahov",
+                    "date": "2022-07-14"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_14_085133222_9c614b2fa6.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Semolinové fusilli se sušenými rajčaty a pestem, parmazán",
+            "category": "specialOfTheDay",
+            "nameNormalized": "Semolinovefusillisesusenymirajcatyapestemparmazan",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 72,
+                    "priceRegular": 97,
+                    "location": "strahov",
+                    "date": "2022-07-15"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_15_074354317_ef4a393768.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Hovězí  vývar s masem a tarhoňou",
+            "category": "soup",
+            "nameNormalized": "Hovezivyvarsmasematarhonou",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 12,
+                    "priceRegular": 20,
+                    "location": "technicka",
+                    "date": "2022-07-14"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Semolinové těstoviny s krůtími nudličkami, pečenou zeleninou, parmazán",
+            "category": "specialOfTheDay",
+            "nameNormalized": "Semolinovetestovinyskrutiminudlickamipecenouzeleninouparmazan",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 103.99,
+                    "priceRegular": 129,
+                    "location": "technicka",
+                    "date": "2022-07-14"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_3_and_x_File_IMG_2022_07_14_102618153_423c1d2b01.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Kuřecí s tarhoňou a zeleninou",
+            "category": "soup",
+            "nameNormalized": "Kurecistarhonouazeleninou",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 12,
+                    "priceRegular": 20,
+                    "location": "strahov",
+                    "date": "2022-07-14"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Hovězí pečeně znojemská, knedlíky houskové/rýže dušená",
+            "category": "mainDish",
+            "nameNormalized": "Hovezipeceneznojemskaknedlikyhouskove/ryzedusena",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 87,
+                    "priceRegular": 112,
+                    "location": "strahov",
+                    "date": "2022-07-14"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_14_091629586_02da0924ad.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Vanovo špagety zapečené se sýrem",
+            "category": "mainDish",
+            "nameNormalized": "Vanovospagetyzapecenesesyrem",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 83,
+                    "priceRegular": 108,
+                    "location": "strahov",
+                    "date": "2022-07-14"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_14_091548798_6c62bca1e7.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Smažené kuřecí řízečky v sezamu, brambory vařené",
+            "category": "mainDish",
+            "nameNormalized": "Smazenekurecirizeckyvsezamubramboryvarene",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 85,
+                    "priceRegular": 110,
+                    "location": "strahov",
+                    "date": "2022-07-14"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_14_091501379_56c4e8d4d1.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Hovězí pečeně znojemská, rýže dušená",
+            "category": "mainDish",
+            "nameNormalized": "Hovezipeceneznojemskaryzedusena",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 87,
+                    "priceRegular": 112,
+                    "location": "strahov",
+                    "date": "2022-07-14"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Knedlíky s vejci,  okurka sterilovaná",
+            "category": "specialOfTheDay",
+            "nameNormalized": "Knedlikysvejciokurkasterilovana",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 68,
+                    "priceRegular": 93,
+                    "location": "strahov",
+                    "date": "2022-07-14"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_14_091737895_ab028556db.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Jablkový závin",
+            "category": "desert",
+            "nameNormalized": "Jablkovyzavin",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 15,
+                    "priceRegular": 15,
+                    "location": "strahov",
+                    "date": "2022-07-14"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Vepřový steak zapečený šunkou a sýrem, smažené hranolky",
+            "category": "mainDish",
+            "nameNormalized": "Veprovysteakzapecenysunkouasyremsmazenehranolky",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 87,
+                    "priceRegular": 112,
+                    "location": "technicka",
+                    "date": "2022-07-15"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Kachna pečená, červené zelí s jablky, variace knedlíků",
+            "category": "mainDish",
+            "nameNormalized": "Kachnapecenacervenezelisjablkyvariaceknedliku",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 121,
+                    "priceRegular": 146,
+                    "location": "technicka",
+                    "date": "2022-07-14"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_3_and_x_File_IMG_2022_07_14_100806776_e3e58ab2d0.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Sojové maso ďábelské, bramborové hranolky",
+            "category": "specialOfTheDay",
+            "nameNormalized": "Sojovemasodabelskebramborovehranolky",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 68,
+                    "priceRegular": 93,
+                    "location": "strahov",
+                    "date": "2022-07-14"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_14_094138010_17217105d4.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Vepřový steak zapečený šunkou a sýrem, smažené  hranolky/ vařené brambory",
+            "category": "mainDish",
+            "nameNormalized": "Veprovysteakzapecenysunkouasyremsmazenehranolky/varenebrambory",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 87,
+                    "priceRegular": 112,
+                    "location": "technicka",
+                    "date": "2022-07-15"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_3_and_x_File_IMG_2022_07_15_102339990_f04fe773ef.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Srbské rizoto se sýrem,  sterilovaná okurka",
+            "category": "mainDish",
+            "nameNormalized": "Srbskerizotosesyremsterilovanaokurka",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 83,
+                    "priceRegular": 108,
+                    "location": "technicka",
+                    "date": "2022-07-15"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_3_and_x_File_IMG_2022_07_15_102703527_bbfb144d0b.jpg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Maková taštička",
+            "category": "desert",
+            "nameNormalized": "Makovatasticka",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 14,
+                    "priceRegular": 14,
+                    "location": "technicka",
+                    "date": "2022-07-15"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Hovězí vývar s játrovými knedlíčky",
+            "category": "soup",
+            "nameNormalized": "Hovezivyvarsjatrovymiknedlicky",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 12,
+                    "priceRegular": 20,
+                    "location": "strahov",
+                    "date": "2022-07-15"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Šumavská zelnice",
+            "category": "soup",
+            "nameNormalized": "Sumavskazelnice",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 12,
+                    "priceRegular": 20,
+                    "location": "strahov",
+                    "date": "2022-07-15"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Vepřové žebírko se sázeným vejcem, americké brambory, tatarská omáčka",
+            "category": "mainDish",
+            "nameNormalized": "Veprovezebirkosesazenymvejcemamerickebramborytatarskaomacka",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 85,
+                    "priceRegular": 110,
+                    "location": "strahov",
+                    "date": "2022-07-15"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_15_100141444_65df375a85.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Kuřecí plátek v kari omáčce, jasmínová rýže",
+            "category": "mainDish",
+            "nameNormalized": "Kureciplatekvkariomaccejasminovaryze",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 79,
+                    "priceRegular": 104,
+                    "location": "strahov",
+                    "date": "2022-07-15"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_15_074105519_3e9425fab7.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Pikantní masová směs, rýže dušená/hranolky",
+            "category": "mainDish",
+            "nameNormalized": "Pikantnimasovasmesryzedusena/hranolky",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 84,
+                    "priceRegular": 109,
+                    "location": "strahov",
+                    "date": "2022-07-15"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_15_074228073_7c0980b8af.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Míchaný s kuřecím masem s sebou",
+            "category": "saladsAndDishes",
+            "nameNormalized": "Michanyskurecimmasemssebou",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 91,
+                    "priceRegular": 116,
+                    "location": "strahov",
+                    "date": "2022-07-07"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 91,
+                    "priceRegular": 116,
+                    "location": "strahov",
+                    "date": "2022-07-11"
+                  }
+                },
+                {
+                  "attributes": {
+                    "priceStudent": 91,
+                    "priceRegular": 116,
+                    "location": "strahov",
+                    "date": "2022-07-15"
+                  }
+                }
+              ]
+            },
+            "img": {
+              "data": {
+                "attributes": {
+                  "url": "https://menza-images.s3.eu-central-1.amazonaws.com/showfoto_php_cl_Podsystem_1_and_x_File_IMG_2022_07_11_114238052_e1c16d712d.JPG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "attributes": {
+            "name": "Koláč krémový",
+            "category": "desert",
+            "nameNormalized": "Kolackremovy",
+            "meal_prices": {
+              "data": [
+                {
+                  "attributes": {
+                    "priceStudent": 15,
+                    "priceRegular": 15,
+                    "location": "strahov",
+                    "date": "2022-07-15"
+                  }
+                }
+              ]
+            },
+            "img": { "data": null }
           }
         }
       ]

@@ -14,6 +14,9 @@ model Restaurant {
   id           String        @id @default(uuid())
   name         String        @unique
   menuUrl      String
+  address      String
+  openingHours String
+  img          String
   MealPrices   MealPrice[]
   MealPictures MealPicture[]
   scrape       Boolean       @default(true)

@@ -3,6 +3,9 @@ CREATE TABLE "Restaurant" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "menuUrl" TEXT NOT NULL,
+    "address" TEXT NOT NULL,
+    "openingHours" TEXT NOT NULL,
+    "img" TEXT NOT NULL,
     "scrape" BOOLEAN NOT NULL DEFAULT true,
 
     CONSTRAINT "Restaurant_pkey" PRIMARY KEY ("id")
