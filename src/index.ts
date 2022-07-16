@@ -14,6 +14,7 @@ import RestaurantResolver from "./resolvers/restaurant/restaurant.resolver";
 import MealPriceResolver from "./resolvers/mealPrice/mealPrice.resolver";
 import MealPictureResolver from "./resolvers/mealPicture/mealPicture.resolver";
 import { registerController, useContainer } from "cron-decorators";
+import ImportService from "./data/import";
 
 const app = express();
 
@@ -23,6 +24,8 @@ registerController([
   __dirname + "/crons/**/*.js",
 ]);
 
+const importService = Container.get(ImportService);
+
 async function main() {
   app.set("trust proxy", 1);
   app.use(
@@ -31,6 +34,11 @@ async function main() {
       credentials: true,
     })
   );
+
+  app.get("/import", async (_, res) => {
+    await importService.import();
+    res.send("ok");
+  });
 
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
