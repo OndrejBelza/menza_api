@@ -1,7 +1,7 @@
+import { UUIDResolver } from "graphql-scalars";
 import {
   Arg,
   FieldResolver,
-  ID,
   Mutation,
   Query,
   Resolver,
@@ -50,7 +50,7 @@ class MealPriceResolver {
 
   @Query(() => MealPrice, { nullable: true })
   async mealPrice(
-    @Arg("id", () => ID) id: string
+    @Arg("id", () => UUIDResolver) id: string
   ): Promise<BaseMealPrice | null> {
     return this.mealPriceService.findMealPrice(id);
   }

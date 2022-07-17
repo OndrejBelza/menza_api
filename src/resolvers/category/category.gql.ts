@@ -1,9 +1,10 @@
+import { UUIDResolver } from "graphql-scalars";
 import { Field, InputType, ObjectType } from "type-graphql";
 import { Meal } from "../meal/meal.gql";
 
 @ObjectType()
 export class Category {
-  @Field()
+  @Field(() => UUIDResolver)
   id: string;
 
   @Field()
@@ -15,7 +16,7 @@ export class Category {
 
 @InputType()
 export class UpdateCategoryInput {
-  @Field()
+  @Field(() => UUIDResolver)
   id: string;
 
   @Field()

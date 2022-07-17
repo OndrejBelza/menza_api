@@ -14,6 +14,10 @@ import RestaurantResolver from "./resolvers/restaurant/restaurant.resolver";
 import MealPriceResolver from "./resolvers/mealPrice/mealPrice.resolver";
 import MealPictureResolver from "./resolvers/mealPicture/mealPicture.resolver";
 import { registerController, useContainer } from "cron-decorators";
+import {
+  typeDefs as scalarTypeDefs,
+  resolvers as scalarResolvers,
+} from "graphql-scalars";
 
 const app = express();
 
@@ -44,6 +48,8 @@ async function main() {
       container: Container,
       validate: false,
     }),
+    typeDefs: [...scalarTypeDefs],
+    resolvers: [scalarResolvers],
     introspection: true,
     context: ({ req, res }): MyContext => ({ req, res }),
     plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],

@@ -1,7 +1,7 @@
+import { UUIDResolver } from "graphql-scalars";
 import {
   Arg,
   FieldResolver,
-  ID,
   Mutation,
   Query,
   Resolver,
@@ -51,7 +51,9 @@ class MealPictureResolver {
   }
 
   @Query(() => MealPicture, { nullable: true })
-  async mealPicture(@Arg("id") id: string): Promise<BaseMealPicture | null> {
+  async mealPicture(
+    @Arg("id", () => UUIDResolver) id: string
+  ): Promise<BaseMealPicture | null> {
     return this.mealPictureService.findMealPicture(id);
   }
 
@@ -74,7 +76,7 @@ class MealPictureResolver {
   @Mutation(() => MealPicture)
   @UseMiddleware(AdminGuard)
   async delateMealPicture(
-    @Arg("id", () => ID) id: string
+    @Arg("id", () => UUIDResolver) id: string
   ): Promise<BaseMealPicture> {
     return this.mealPictureService.deleteMealPicture(id);
   }

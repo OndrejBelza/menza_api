@@ -1,11 +1,12 @@
-import { Field, ID, InputType, ObjectType } from "type-graphql";
+import { UUIDResolver } from "graphql-scalars";
+import { Field, InputType, ObjectType } from "type-graphql";
 import { Category } from "../category/category.gql";
 import { MealPicture } from "../mealPicture/mealPicture.gql";
 import { MealPrice } from "../mealPrice/mealPrice.gql";
 
 @ObjectType()
 export class Meal {
-  @Field(() => ID)
+  @Field(() => UUIDResolver)
   id: string;
 
   @Field(() => String)
@@ -26,7 +27,7 @@ export class MealOption {
   @Field()
   name: string;
 
-  @Field(() => ID)
+  @Field(() => UUIDResolver)
   id: string;
 }
 
@@ -35,18 +36,18 @@ export class CreateMealInput {
   @Field()
   name: string;
 
-  @Field(() => ID)
+  @Field(() => UUIDResolver)
   categoryId: string;
 }
 
 @InputType()
 export class UpdateMealInput {
-  @Field(() => ID)
+  @Field(() => UUIDResolver)
   id: string;
 
   @Field()
   name: string;
 
-  @Field(() => ID)
+  @Field(() => UUIDResolver)
   categoryId: string;
 }

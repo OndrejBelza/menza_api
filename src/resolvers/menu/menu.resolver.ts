@@ -1,3 +1,4 @@
+import { UUIDResolver } from "graphql-scalars";
 import { Arg, FieldResolver, Query, Resolver, Root } from "type-graphql";
 import { Service } from "typedi";
 import RestaurantLoader from "../../dataloaders/restaurantLoader";
@@ -32,7 +33,7 @@ export class MenuResolver {
 
   @Query(() => Menu)
   async menu(
-    @Arg("restaurantId") restaurantId: string,
+    @Arg("restaurantId", () => UUIDResolver) restaurantId: string,
     @Arg("date") date: Date
   ): Promise<BaseMenu> {
     return {

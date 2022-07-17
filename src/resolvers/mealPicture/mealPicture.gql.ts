@@ -1,10 +1,11 @@
-import { Field, ID, InputType, ObjectType } from "type-graphql";
+import { UUIDResolver } from "graphql-scalars";
+import { Field, InputType, ObjectType } from "type-graphql";
 import { Meal } from "../meal/meal.gql";
 import { Restaurant } from "../restaurant/restaurant.gql";
 
 @ObjectType()
 export class MealPicture {
-  @Field(() => ID)
+  @Field(() => UUIDResolver)
   id: string;
 
   @Field()
@@ -22,15 +23,15 @@ export class CreateMealPictureInput {
   @Field()
   img: string;
 
-  @Field(() => ID)
+  @Field(() => UUIDResolver)
   mealId: string;
 
-  @Field(() => ID)
+  @Field(() => UUIDResolver)
   restaurantId: string;
 }
 
 @InputType()
 export class UpdateMealPictureInput extends CreateMealPictureInput {
-  @Field(() => ID)
+  @Field(() => UUIDResolver)
   id: string;
 }

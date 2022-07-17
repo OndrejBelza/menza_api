@@ -1,3 +1,4 @@
+import { UUIDResolver } from "graphql-scalars";
 import {
   Arg,
   FieldResolver,
@@ -33,7 +34,9 @@ class CategoryResolver {
   }
 
   @Query(() => Category, { nullable: true })
-  async category(@Arg("id") id: string): Promise<BaseCategory | null> {
+  async category(
+    @Arg("id", () => UUIDResolver) id: string
+  ): Promise<BaseCategory | null> {
     return this.categoryService.findCategory(id);
   }
 
@@ -46,7 +49,7 @@ class CategoryResolver {
   @Mutation(() => Category)
   @UseMiddleware(AdminGuard)
   async deleteCategory(
-    @Arg("id") id: string
+    @Arg("id", () => UUIDResolver) id: string
   ): Promise<Omit<Category, "meals">> {
     return this.categoryService.deleteCategory(id);
   }
