@@ -61,9 +61,11 @@ export class ScrapingService {
     let currentCategory: string;
     let meals: Meal[] = [];
 
+    const rowCount = $(menuTable).find("tr").length;
+
     $(menuTable)
       .find("tr")
-      .each((_, r) => {
+      .each((rowIndex, r) => {
         const row = $(r);
         // Row with category name
         if (row.find("th").length) {
@@ -109,6 +111,13 @@ export class ScrapingService {
             meal.priceStudent
           )
             meals.push(meal as Meal);
+
+          if (
+            rowIndex === rowCount - 1 &&
+            meals.length &&
+            menu[currentCategory] === undefined
+          )
+            menu[currentCategory] = meals;
         }
       });
 
