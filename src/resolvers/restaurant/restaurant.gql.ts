@@ -25,6 +25,9 @@ export class Restaurant {
   @Field()
   scrape: boolean;
 
+  @Field(() => Date)
+  scrapingStartedAt: Date;
+
   @Field(() => [MealPrice])
   mealPrices: MealPrice[];
 }
