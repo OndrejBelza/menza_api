@@ -9,6 +9,8 @@ import {
   UseMiddleware,
 } from "type-graphql";
 import { Service } from "typedi";
+import AverageMealPriceRegularLoader from "../../dataloaders/averageMealPriceRegularLoader";
+import AverageMealPriceStudentLoader from "../../dataloaders/averageMealPriceStudentLoader";
 import CategoryLoader from "../../dataloaders/categoryLoader";
 import MealPicturesLoader from "../../dataloaders/mealPicturesLoader";
 import MealPricesLoader from "../../dataloaders/mealPricesLoader";
@@ -34,7 +36,9 @@ class MealResolver {
     private mealService: MealService,
     private mealPicturesLoader: MealPicturesLoader,
     private categoryLoader: CategoryLoader,
-    private mealPricesLoader: MealPricesLoader
+    private mealPricesLoader: MealPricesLoader,
+    private averageMealPriceStudentLoader: AverageMealPriceStudentLoader,
+    private AverageMealPriceRegularLoader: AverageMealPriceRegularLoader
   ) {}
 
   @FieldResolver()
@@ -50,6 +54,16 @@ class MealResolver {
   @FieldResolver()
   async prices(@Root() meal: Meal): Promise<BaseMealPrice[]> {
     return this.mealPricesLoader.load(meal.id);
+  }
+
+  @FieldResolver()
+  async averagePriceStudent(@Root() meal: Meal): Promise<number> {
+    return this.averageMealPriceStudentLoader.load(meal.id);
+  }
+
+  @FieldResolver()
+  async averagePriceNormal(@Root() meal: Meal): Promise<number> {
+    return this.AverageMealPriceRegularLoader.load(meal.id);
   }
 
   @Query(() => [Meal])

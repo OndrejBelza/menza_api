@@ -29,6 +29,12 @@ export class Meal {
 
   @Field(() => [MealPrice])
   prices: MealPrice[];
+
+  @Field()
+  averagePriceStudent: number;
+
+  @Field()
+  averagePriceNormal: number;
 }
 
 @ObjectType()
