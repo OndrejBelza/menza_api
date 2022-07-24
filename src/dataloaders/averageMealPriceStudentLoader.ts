@@ -6,12 +6,14 @@ import PrismaService from "../services/prisma.service";
 class AverageMealPriceStudentLoader {
   private loader;
   constructor(private prismaService: PrismaService) {
-    this.loader = new DataLoader<string, number>((keys) =>
+    this.loader = new DataLoader<string, number | null>((keys) =>
       this.batchLoad(keys)
     );
   }
 
-  private async batchLoad(keys: readonly string[]): Promise<Array<number>> {
+  private async batchLoad(
+    keys: readonly string[]
+  ): Promise<Array<number | null>> {
     const averagePrices = await this.prismaService.mealPrice.groupBy({
       by: ["mealId"],
       _avg: {
@@ -27,11 +29,11 @@ class AverageMealPriceStudentLoader {
     return keys.map(
       (key) =>
         averagePrices.find((averagePrice) => averagePrice.mealId === key)?._avg
-          .priceStudent || NaN
+          .priceStudent || null
     );
   }
 
-  async load(key: string): Promise<number> {
+  async load(key: string): Promise<number | null> {
     return this.loader.load(key);
   }
 }

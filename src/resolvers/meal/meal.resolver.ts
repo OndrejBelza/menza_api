@@ -2,6 +2,7 @@ import { UUIDResolver } from "graphql-scalars";
 import {
   Arg,
   FieldResolver,
+  Float,
   Mutation,
   Query,
   Resolver,
@@ -56,13 +57,13 @@ class MealResolver {
     return this.mealPricesLoader.load(meal.id);
   }
 
-  @FieldResolver()
-  async averagePriceStudent(@Root() meal: Meal): Promise<number> {
+  @FieldResolver(() => Float, { nullable: true })
+  async averagePriceStudent(@Root() meal: Meal): Promise<number | null> {
     return this.averageMealPriceStudentLoader.load(meal.id);
   }
 
-  @FieldResolver()
-  async averagePriceNormal(@Root() meal: Meal): Promise<number> {
+  @FieldResolver(() => Float, { nullable: true })
+  async averagePriceNormal(@Root() meal: Meal): Promise<number | null> {
     return this.AverageMealPriceRegularLoader.load(meal.id);
   }
 

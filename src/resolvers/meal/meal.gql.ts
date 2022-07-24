@@ -1,5 +1,5 @@
 import { UUIDResolver } from "graphql-scalars";
-import { Field, InputType, ObjectType } from "type-graphql";
+import { Field, Float, InputType, ObjectType } from "type-graphql";
 import { Category } from "../category/category.gql";
 import { MealPicture } from "../mealPicture/mealPicture.gql";
 import { MealPrice } from "../mealPrice/mealPrice.gql";
@@ -30,11 +30,11 @@ export class Meal {
   @Field(() => [MealPrice])
   prices: MealPrice[];
 
-  @Field()
-  averagePriceStudent: number;
+  @Field(() => Float, { nullable: true })
+  averagePriceStudent?: number | null;
 
-  @Field()
-  averagePriceNormal: number;
+  @Field(() => Float, { nullable: true })
+  averagePriceNormal?: number | null;
 }
 
 @ObjectType()
