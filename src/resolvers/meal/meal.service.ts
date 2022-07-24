@@ -11,8 +11,37 @@ class MealService {
     private categoryService: CategoryService
   ) {}
 
-  async findMeals(): Promise<Meal[]> {
-    return this.prismaService.meal.findMany();
+  async findMeals(
+    filter?: {
+      name?: string;
+      category?: string;
+    },
+    sort?: { by: string; order?: string }
+  ): Promise<Meal[]> {
+    let orderBy = undefined;
+    if (sort) orderBy = { [sort.by]: sort.order ? sort.order : "asc" };
+
+    return this.prismaService.meal.findMany({
+      orderBy,
+      where: {
+        AND: {
+          category: filter?.category
+            ? {
+                name: {
+                  contains: filter.category,
+                  mode: "insensitive",
+                },
+              }
+            : undefined,
+          name: filter?.name
+            ? {
+                contains: filter.name,
+                mode: "insensitive",
+              }
+            : undefined,
+        },
+      },
+    });
   }
 
   async findMeal(id: string): Promise<Meal | null> {

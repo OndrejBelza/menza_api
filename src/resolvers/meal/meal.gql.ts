@@ -5,6 +5,15 @@ import { MealPicture } from "../mealPicture/mealPicture.gql";
 import { MealPrice } from "../mealPrice/mealPrice.gql";
 
 @ObjectType()
+export class MealFilter {
+  @Field({ nullable: true })
+  name?: string;
+
+  @Field({ nullable: true })
+  category?: string;
+}
+
+@ObjectType()
 export class Meal {
   @Field(() => UUIDResolver)
   id: string;

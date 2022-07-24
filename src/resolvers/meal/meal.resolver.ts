@@ -13,11 +13,18 @@ import CategoryLoader from "../../dataloaders/categoryLoader";
 import MealPicturesLoader from "../../dataloaders/mealPicturesLoader";
 import MealPricesLoader from "../../dataloaders/mealPricesLoader";
 import { AdminGuard } from "../../middlewares/admin.middleware";
+import { Sort } from "../../types/gql/Filter.gql";
 import normalizeMealName from "../../utils/normalizeMealName";
 import BaseMealPicture from "../mealPicture/baseMealPicture";
 import BaseMealPrice from "../mealPrice/baseMealPrice";
 import BaseMeal from "./baseMeal";
-import { CreateMealInput, Meal, MealOption, UpdateMealInput } from "./meal.gql";
+import {
+  CreateMealInput,
+  Meal,
+  MealFilter,
+  MealOption,
+  UpdateMealInput,
+} from "./meal.gql";
 import MealService from "./meal.service";
 
 @Service()
@@ -46,8 +53,11 @@ class MealResolver {
   }
 
   @Query(() => [Meal])
-  async meals(): Promise<BaseMeal[]> {
-    return this.mealService.findMeals();
+  async meals(
+    @Arg("filter", () => MealFilter, { nullable: true }) filter?: MealFilter,
+    @Arg("sort", () => Sort, { nullable: true }) sort?: Sort
+  ): Promise<BaseMeal[]> {
+    return this.mealService.findMeals(filter, sort);
   }
 
   @Query(() => Meal, { nullable: true })
