@@ -4,7 +4,7 @@ import { Category } from "../category/category.gql";
 import { MealPicture } from "../mealPicture/mealPicture.gql";
 import { MealPrice } from "../mealPrice/mealPrice.gql";
 
-@ObjectType()
+@InputType()
 export class MealFilter {
   @Field({ nullable: true })
   name?: string;

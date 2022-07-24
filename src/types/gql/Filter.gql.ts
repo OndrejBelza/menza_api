@@ -1,6 +1,6 @@
-import { ObjectType, Field } from "type-graphql";
+import { Field, InputType } from "type-graphql";
 
-@ObjectType()
+@InputType()
 export class Sort {
   @Field()
   by: string;
