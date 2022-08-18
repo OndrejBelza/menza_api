@@ -195,30 +195,31 @@ export class ScrapingService {
         priceStudent: meal.priceStudent,
       });
 
-    if (meal.imgUrl) {
-      let dbMealPicture: DbMealPicture | null =
-        await this.mealPictureService.findMealPictureByMealIdAndRestaurantId(
-          dbMeal.id,
-          restaurantId
-        );
+    // aws issue
+    // if (meal.imgUrl) {
+    //   let dbMealPicture: DbMealPicture | null =
+    //     await this.mealPictureService.findMealPictureByMealIdAndRestaurantId(
+    //       dbMeal.id,
+    //       restaurantId
+    //     );
 
-      if (!dbMealPicture) {
-        const { img, ext, contentType } = await this.downloadImage(meal.imgUrl);
-        const filename = `${meal.name.replace(
-          /\/|\-|\_|\.|\*|\'|\(|\)/gi,
-          " "
-        )}-${restaurantName}-${dayjs().format("YYYY-MM-DD")}.${ext}`;
-        const uploadResult = await this.uploadImage(img, filename, contentType);
+    //   if (!dbMealPicture) {
+    //     const { img, ext, contentType } = await this.downloadImage(meal.imgUrl);
+    //     const filename = `${meal.name.replace(
+    //       /\/|\-|\_|\.|\*|\'|\(|\)/gi,
+    //       " "
+    //     )}-${restaurantName}-${dayjs().format("YYYY-MM-DD")}.${ext}`;
+    //     const uploadResult = await this.uploadImage(img, filename, contentType);
 
-        console.log(uploadResult);
+    //     console.log(uploadResult);
 
-        dbMealPicture = await this.mealPictureService.createMealPicture({
-          mealId: dbMeal.id,
-          restaurantId,
-          img: uploadResult.Key,
-        });
-      }
-    }
+    //     dbMealPicture = await this.mealPictureService.createMealPicture({
+    //       mealId: dbMeal.id,
+    //       restaurantId,
+    //       img: uploadResult.Key,
+    //     });
+    //   }
+    // }
   }
 }
 
