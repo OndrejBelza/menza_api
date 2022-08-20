@@ -8,9 +8,14 @@ import cheerio from "cheerio";
 import normalizeMealName from "../utils/normalizeMealName";
 import CategoryService from "../resolvers/category/category.service";
 import MealService from "../resolvers/meal/meal.service";
-import { Meal as DbMeal, MealPrice as DbMealPrice } from "@prisma/client";
+import {
+  Meal as DbMeal,
+  MealPrice as DbMealPrice,
+  MealPicture as DbMealPicture,
+} from "@prisma/client";
 import MealPriceService from "../resolvers/mealPrice/mealPrice.service";
-// import MealPictureService from "../resolvers/mealPicture/mealPicture.service";
+import MealPictureService from "../resolvers/mealPicture/mealPicture.service";
+import dayjs from "dayjs";
 
 type Meal = {
   portion?: string;
@@ -31,7 +36,8 @@ export class ScrapingService {
   constructor(
     private categoryService: CategoryService,
     private mealService: MealService,
-    private mealPriceService: MealPriceService // private mealPictureService: MealPictureService
+    private mealPriceService: MealPriceService,
+    private mealPictureService: MealPictureService
   ) {
     this.s3Service = new AWS.S3({
       region: "eu-central-1",
@@ -160,7 +166,7 @@ export class ScrapingService {
     meal: Meal,
     categoryId: string,
     restaurantId: string,
-    // restaurantName: string,
+    restaurantName: string,
     date: Date
   ) {
     let dbMeal: DbMeal | null = await this.mealService.findMealByNormalizedName(
@@ -189,31 +195,30 @@ export class ScrapingService {
         priceStudent: meal.priceStudent,
       });
 
-    // aws issue
-    // if (meal.imgUrl) {
-    //   let dbMealPicture: DbMealPicture | null =
-    //     await this.mealPictureService.findMealPictureByMealIdAndRestaurantId(
-    //       dbMeal.id,
-    //       restaurantId
-    //     );
+    if (meal.imgUrl) {
+      let dbMealPicture: DbMealPicture | null =
+        await this.mealPictureService.findMealPictureByMealIdAndRestaurantId(
+          dbMeal.id,
+          restaurantId
+        );
 
-    //   if (!dbMealPicture) {
-    //     const { img, ext, contentType } = await this.downloadImage(meal.imgUrl);
-    //     const filename = `${meal.name.replace(
-    //       /\/|\-|\_|\.|\*|\'|\(|\)/gi,
-    //       " "
-    //     )}-${restaurantName}-${dayjs().format("YYYY-MM-DD")}.${ext}`;
-    //     const uploadResult = await this.uploadImage(img, filename, contentType);
+      if (!dbMealPicture) {
+        const { img, ext, contentType } = await this.downloadImage(meal.imgUrl);
+        const filename = `${meal.name.replace(
+          /\/|\-|\_|\.|\*|\'|\(|\)/gi,
+          " "
+        )}-${restaurantName}-${dayjs().format("YYYY-MM-DD")}.${ext}`;
+        const uploadResult = await this.uploadImage(img, filename, contentType);
 
-    //     console.log(uploadResult);
+        console.log(uploadResult);
 
-    //     dbMealPicture = await this.mealPictureService.createMealPicture({
-    //       mealId: dbMeal.id,
-    //       restaurantId,
-    //       img: uploadResult.Key,
-    //     });
-    //   }
-    // }
+        dbMealPicture = await this.mealPictureService.createMealPicture({
+          mealId: dbMeal.id,
+          restaurantId,
+          img: uploadResult.Key,
+        });
+      }
+    }
   }
 }
 
@@ -251,7 +256,7 @@ export class JobController {
             meal,
             category.id,
             restaurant.id,
-            // restaurant.name,
+            restaurant.name,
             new Date()
           );
         }
